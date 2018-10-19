@@ -1,0 +1,248 @@
+﻿body {
+}
+
+$background-dark: #0A0845; $yellow:#F4E96B; $pink: #EB4E89; $blue: #77D6E2;  *,
+*:before,
+*:after {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #0A0845;
+    padding: 1em 1em 1em;
+}
+
+header {
+    height: 300px;
+    position: relative;
+}
+
+.header__avatar {
+    width: 280px;
+    height: 280px;
+    position: absolute;
+    border-radius: 140px;
+    top: 0;
+    left: 46%;
+    margin: 0 -80px;
+    background-color: black;
+    background-image: linear-gradient( to bottom, $yellow 0%, $pink 100% );
+    text-align:center;
+}
+
+.labUserName {
+    Font-Size: -webkit-xxx-large;
+    color: #A2A200;
+    background-color: Black;
+    float: none;
+} 
+p {
+    color: aqua;
+    font-size: x-large;
+    padding-top: 50px;
+    margin-left: 10px;
+    margin-right: 10px;
+    text-align: center;
+}
+input{}
+
+.btn_redirect {
+    border-style:none;
+    background-color:deeppink;
+    color:Black;
+    text-align:center;
+}
+.btn_redirect:hover{
+    background-color:lightpink;
+
+    }
+    
+    .header__avatar.drop {
+        animation-name: dropAvatar;
+        animation-iteration-count: 1;
+        animation-timing-function: ease-in;
+        animation-duration: .6s;
+    }
+
+@keyframes dropAvatar {
+    // start from top 0% {
+        transform: translateY(-400px);
+    }
+
+    // drop down past 0 55% {
+        transform: translateY(20px);
+        animation-timing-function: ease-out;
+    }
+
+    // bounce up 80% {
+        transform: translateY(-50px);
+        animation-timing-function: ease-out;
+    }
+
+    // drop to 0 100% {
+        transform: translateY(0px);
+    }
+}
+
+.header__avatar.spin {
+    animation-name: spinAvatar;
+    animation-iteration-count: 1;
+    animation-timing-function: ease-in-out;
+    animation-duration: .4s;
+}
+
+@keyframes spinAvatar {
+    100% {
+        transform: rotate(1080deg);
+    }
+}
+
+nav {
+    margin: .5em 0 3em;
+    font-size: 1.2em;
+}
+
+.menu__list {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.menu__item {
+    display: block;
+    margin: 1em 0;
+    margin: 0 .5em;
+}
+
+.menu__link,
+.reset {
+    font-family: 'Lato';
+    font-weight: 300;
+    font-size: 1em;
+    display: block;
+    padding: .5em 1em;
+    cursor: pointer;
+    user-select: none;
+    -webkit-touch-callout: none;
+    -khtml-user-select: none;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    position: relative;
+    text-align: center;
+    color: #F4E96B;
+    background: none;
+    border: none;
+    text-decoration: none;
+    text-transform: uppercase;
+    transition: color 0.3s;
+}
+
+    .menu__link:hover,
+    .menu__link:focus,
+    .reset:hover,
+    .reset:focus {
+        outline: none;
+        color: #EB4E89;
+    }
+
+.menu__item--current .menu__link {
+    color: #77D6E2;
+}
+
+.menu__link:before,
+.menu__link:after {
+    content: '';
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    opacity: 0;
+    border: 2px solid $pink;
+    transition: transform 0.3s, opacity 0.3s;
+    transition-timing-function: cubic-bezier(0.17, 0.67, 0.05, 1.29);
+}
+
+.menu__link:before {
+    top: 0;
+    left: 0;
+    border-width: 2px 0 0 2px;
+    transform: translate3d(10px, 10px, 0);
+}
+
+.menu__link:after {
+    right: 0;
+    bottom: 0;
+    border-width: 0 2px 2px 0;
+    transform: translate3d(-10px, -10px, 0);
+}
+
+.menu__item--current .menu__link:before,
+.menu__item--current .menu__link:after {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+}
+
+.kakushi {
+    border-style: none;
+    border-color: inherit;
+    border-width: 0px;
+    Height: 0px;
+    padding: 0px;
+}
+
+footer {
+    margin: 3em 0 1em;
+}
+
+.reset {
+    border: solid 2px #EB4E89;
+    border-radius: 6px;
+    margin: 0 auto;
+}
+
+.panel-default {
+    /*word-break:break-all;
+    display:inline-block;*/
+    float:left;
+    margin:5px;
+    width: 254px;
+    height:296px;
+    background-color:white;
+    display:table-cell;
+    text-align:center;
+    vertical-align:middle;
+    background-color:white;
+}
+
+span{
+    background-color:white;
+    color:black;
+    text-align:center;
+    float:left;
+}
+
+.clsImage{
+    max-width:254px;
+    max-height:254px;
+    /*min-width:254px;*/
+    min-height:254px;
+    float:none;
+}
+.clstb {
+    width: 254px;
+    padding-left: 0;
+    padding-right: 0;
+    margin: 0 auto;
+    font-size: smaller;
+    background-color:white;
+    
+}
+.clstb2 {
+    width: 254px;
+    padding-left: 0px;
+    padding-right: 0px;
+    margin: 0 auto;
+    float:right;
+}

@@ -1,0 +1,24 @@
+﻿body {
+}
+/*width=500, height=400*/ 
+
+.main {
+    width: 100%;
+    height: 100%;
+    padding-top:5%;
+    border: 1px solid #000;
+    background-color: #0A0845;
+}
+
+    .main div {
+        width: 90%;
+        height: 90%;
+        margin: 0 auto;
+        padding-top: 5px;
+        padding-bottom: 5px;
+        background-color: #0A0845;
+        opacity: 0.9;
+        text-align: center;
+    }
+
+
